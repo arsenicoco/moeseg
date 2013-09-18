@@ -3,7 +3,7 @@
 /****************************************************************************
 ** Copyright (c) onbudgetandtime.com All rights reserved.
 **
-** This file is part of the Moseg Engine
+** This file is part of the Moeseg Engine
 **
 ** This file may be distributed under the terms of the onbudgetandtime.com
 ** license as defined by onbudgetandtime.com and appearing in the file
@@ -17,8 +17,8 @@
 **
 ****************************************************************************/
 
-#ifndef MOSEG_DEF
-#define MOSEG_DEF
+#ifndef MOESEG_DEF
+#define MOESEG_DEF
 
 // Type for Ethic related attribute
 typedef int EthicalAttribute;
@@ -41,4 +41,4 @@ const EthicalAttribute Kosher	= 8;
 // Custom attribute
 const EthicalAttribute Custom	= 16;
 
-#endif //MOSEG_DEF
+#endif //MOESEG_DEF

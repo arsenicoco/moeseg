@@ -3,7 +3,7 @@
 /****************************************************************************
 ** Copyright (c) onbudgetandtime.com All rights reserved.
 **
-** This file is part of the Moseg Engine
+** This file is part of the Moeseg Engine
 **
 ** This file may be distributed under the terms of the onbudgetandtime.com
 ** license as defined by onbudgetandtime.com and appearing in the file
@@ -17,29 +17,29 @@
 ** Usage example:
       CString strSettingsFilename; // get filename of the setting file here
 		FIX::Message msg; // construct FIX message here
-		CMosegClient client;
+		CMoesegClient client;
 		client.ApplySettings(strSettingsFilename);
-		if (IfMessageValid(Green))
+		if (IsMessageValid(Green))
 		{
 			client.SendMessage(message);
 		}
 ** 
 ****************************************************************************/
 
-#ifndef MOSEG_CLIENT
-#define MOSEG_CLIENT
+#ifndef MOESEG_CLIENT
+#define MOESEG_CLIENT
 
 #ifdef _MSC_VER
 #pragma warning( disable: 4786 )
 #endif
 
 #include <Message.h>
-#include "Moseg.h"
+#include "Moeseg.h"
 
 using namespace std;
 
 
-class CMosegClient
+class CMoesegClient
 {
 public:
 
@@ -58,7 +58,7 @@ public:
 
 	// SendMessage sends FIX message to FIX engine without ethical attributes verification.
 	// Verifiication could be done by IfMessageValid or GetValidEthicalAttributes methods
-	void SendMessage( FIX::Message);
+	void SendMessage( FIX::Message );
 
 	// SendMessage sends FIX message to FIX engine. Message processing is defined by
 	// ethical attributes.
@@ -84,8 +84,8 @@ public:
 	void OnLogout( const FIX::SessionID& );
 
 	// OnMessageSent notifies  wheb FIX session end recieving a message successfully.
-	void OnMessageSent(const FIX::SessionID& );
+	void OnMessageSent( const FIX::SessionID& );
 };
 
 
-#endif // MOSEG_CLIENT
+#endif // MOESEG_CLIENT
